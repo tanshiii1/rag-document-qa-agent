@@ -25,3 +25,15 @@ A retrieval-augmented generation (RAG) pipeline that lets you upload any researc
 - **FAISS** — vector similarity search
 - **Streamlit** — interactive web interface
 
+## Setup
+
+1. Install dependencies:
+```pip install streamlit langchain langchain-community langchain-groq langchain-huggingface faiss-cpu python-dotenv pypdf```
+2. Add your Groq API key to a `.env` file (get a free key at https://console.groq.com/keys):
+```GROQ_API_KEY=your_key_here```
+3. Run the app:
+```streamlit run app.py```
+
+## Notes
+
+Includes error handling for upstream LLM provider failures (timeouts, rate limits, service overload), so the app fails gracefully with a clear message rather than hanging indefinitely.
